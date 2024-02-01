@@ -1,7 +1,7 @@
-module CobylaTests
+module TestingCobyla
 
 using Printf
-using OptimPackNextGen.Powell
+using PowellMethods
 
 function runtests(;revcom::Bool = false, scale::Real = 1.0)
     # Beware that order of operations may affect the result (whithin

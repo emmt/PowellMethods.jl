@@ -1,7 +1,7 @@
-module NewuoaTests
+module TestingNewuoa
 
 using Printf
-using OptimPackNextGen.Powell
+using PowellMethods
 
 function runtests(;revcom::Bool=false, scale::Real=1)
     # The Chebyquad test problem (Fletcher, 1965) for N = 2,4,6 and 8, with

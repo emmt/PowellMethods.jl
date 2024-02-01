@@ -1,7 +1,7 @@
-module BobyqaTests
+module TestingBobyqa
 
 using Printf
-using OptimPackNextGen.Powell
+using PowellMethods
 
 function runtests()
     # The test function.
