@@ -1,0 +1,18 @@
+name = "PowellMethods"
+uuid = "09143c45-d661-4475-8be2-834f77195a9c"
+authors = ["Éric Thiébaut <eric.thiebaut@univ-lyon1.fr> and contributors"]
+version = "0.1.0"
+
+[deps]
+OptimPack_jll = "8115cc2e-fb29-5d71-b5cb-a4fb1c5dcd4c"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "Printf"]

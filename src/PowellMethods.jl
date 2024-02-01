@@ -1,18 +1,10 @@
-#
-# Powell.jl --
-#
-# Mike Powell's derivative free optimization methods for Julia.
-#
-# -----------------------------------------------------------------------------
-#
-# This file is part of OptimPackNextGen.jl which is licensed under the MIT
-# "Expat" License:
-#
-# Copyright (C) 2015-2022, Éric Thiébaut
-# <https://github.com/emmt/OptimPackNextGen.jl>.
-#
+"""
 
-module Powell
+Package `PowellMethods` implements a Julia interface to some of derivative-free
+optimization algorithms by M.J.D. Powell: BOBYQA, COBYLA, and NEYUOA.
+
+"""
+module PowellMethods
 
 export
     iterate,
@@ -192,6 +184,8 @@ function to_scale(scl::AbstractVector{<:Real}, n::Integer)
     return scl isa DenseVector{Cdouble} ? scl : convert(Vector{Cdouble}, scl)
 end
 
+include("wrappers.jl")
+
 include("newuoa.jl")
 import .Newuoa: newuoa, newuoa!
 
@@ -201,4 +195,4 @@ import .Cobyla: cobyla, cobyla!
 include("bobyqa.jl")
 import .Bobyqa: bobyqa, bobyqa!
 
-end # module Powell
+end # module PowellMethods

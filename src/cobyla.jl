@@ -1,17 +1,9 @@
-#
-# cobyla.jl --
-#
-# Julia interface to Mike Powell's COBYLA method.
-#
-# -----------------------------------------------------------------------------
-#
-# This file is part of OptimPackNextGen.jl which is licensed under the MIT
-# "Expat" License:
-#
-# Copyright (C) 2015-2022, Éric Thiébaut
-# <https://github.com/emmt/OptimPackNextGen.jl>.
-#
+"""
 
+Module `PowellMethods.Cobyla` implements a Julia interface to the
+derivative-free optimization algorithm COBYLA by M.J.D. Powell.
+
+"""
 module Cobyla
 
 export
@@ -20,10 +12,10 @@ export
 
 using Printf
 
-using ...Lib: opk_index
+using ..Lib: opk_index
 
 import
-    ...Lib,
+    ..Lib,
     ..AbstractContext,
     ..getncalls,
     ..getradius,
@@ -256,7 +248,7 @@ cobyla(f::Function, x0::AbstractVector{<:Real}, args...; kwds...) =
     cobyla!(f, copyto!(Vector{Cdouble}(undef, length(x0)), x0), args...; kwds...)
 
 """
-    using OptimPackNextGen.Powell
+    using PowellMethods
     ctx = Cobyla.Context(n, m, rhobeg, rhoend; verbose=0, maxeval=500)
 
 creates a new reverse communication context for COBYLA algorithm. A typical

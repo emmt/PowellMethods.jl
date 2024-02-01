@@ -1,17 +1,9 @@
-#
-# bobyqa.jl --
-#
-# Julia interface to Mike Powell's BOBYQA method.
-#
-# -----------------------------------------------------------------------------
-#
-# This file is part of OptimPackNextGen.jl which is licensed under the MIT
-# "Expat" License:
-#
-# Copyright (C) 2015-2022, Éric Thiébaut
-# <https://github.com/emmt/OptimPackNextGen.jl>.
-#
+"""
 
+Module `PowellMethods.Bobyqa` implements a Julia interface to the
+derivative-free optimization algorithm BOBYQA by M.J.D. Powell.
+
+"""
 module Bobyqa
 
 export
@@ -20,10 +12,10 @@ export
 
 using Printf
 
-using ...Lib: opk_index
+using ..Lib: opk_index
 
 import
-    ...Lib,
+    ..Lib,
     ..getreason,
     ..grow!,
     ..Scale,

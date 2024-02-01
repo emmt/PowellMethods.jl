@@ -1,17 +1,9 @@
-#
-# newuoa.jl --
-#
-# Julia interface to Mike Powell's NEWUOA method.
-#
-# -----------------------------------------------------------------------------
-#
-# This file is part of OptimPackNextGen.jl which is licensed under the MIT
-# "Expat" License:
-#
-# Copyright (C) 2015-2022 Éric Thiébaut
-# <https://github.com/emmt/OptimPackNextGen.jl>.
-#
+"""
 
+Module `PowellMethods.Newuoa` implements a Julia interface to the derivative-free
+optimization algorithm NEWUOA by M.J.D. Powell.
+
+"""
 module Newuoa
 
 export
@@ -20,10 +12,10 @@ export
 
 using Printf
 
-using ...Lib: opk_index
+using ..Lib: opk_index
 
 import
-    ...Lib,
+    ..Lib,
     ..AbstractContext,
     ..getncalls,
     ..getradius,
@@ -257,7 +249,7 @@ function newuoa!(f::Function, x::DenseVector{Cdouble},
 end
 
 """
-    using OptimPackNextGen.Powell
+    using PowellMethods
     ctx = Newuoa.Context(n, rhobeg, rhoend; npt=..., verbose=..., maxeval=...)
 
 creates a new reverse communication context for NEWUOA algorithm. A typical
