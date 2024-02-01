@@ -1,4 +1,8 @@
-# PowellMethods [![License][http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat]][./LICENSE.md][![Build Status](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml?query=branch%3Amain) [![Build Status](https://ci.appveyor.com/api/projects/status/github/emmt/PowellMethods.jl?svg=true)](https://ci.appveyor.com/project/emmt/PowellMethods-jl) [![Coverage](https://codecov.io/gh/emmt/PowellMethods.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/emmt/PowellMethods.jl)
+# PowellMethods
+
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE.md)
+[![Build Status](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/emmt/PowellMethods.jl?svg=true)](https://ci.appveyor.com/project/emmt/PowellMethods-jl) [![Coverage](https://codecov.io/gh/emmt/PowellMethods.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/emmt/PowellMethods.jl)
 
 `PowellMethods` is a [Julia](http://julialang.org/) interface to some of the
 derivative-free optimization algorithms by M.J.D. Powell:
@@ -10,12 +14,12 @@ derivative-free optimization algorithms by M.J.D. Powell:
 * `BOBYQA` (Powell, 2009) accounts for bound constraints on the variables.
 
 This package is a wrapper over the implementations of these algorithms in the C
-libraries of [`OptimPack`](https://github.com/emmt/OptimPack). Precompiled
+language in [`OptimPack`](https://github.com/emmt/OptimPack) libraries. Precompiled
 versions of these libraries are provided by
-[OptimPack_jll](https://github.com/JuliaBinaryWrappers/OptimPack_jll.jl)
+[`OptimPack_jll`](https://github.com/JuliaBinaryWrappers/OptimPack_jll.jl)
 package.
 
-For a more mature interface to M.J.D. Powell algorithms I strongly recommend to use the [`PRIMA`](https://github.com/libprima/PRIMA.jl) package.
+For a more mature interface to M.J.D. Powell algorithms, I strongly recommend to use the [`PRIMA`](https://github.com/libprima/PRIMA.jl) package.
 
 
 ## Installation
