@@ -2,7 +2,7 @@
 
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](./LICENSE.md)
 [![Build Status](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/emmt/PowellMethods.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/emmt/PowellMethods.jl?svg=true)](https://ci.appveyor.com/project/emmt/PowellMethods-jl) [![Coverage](https://codecov.io/gh/emmt/PowellMethods.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/emmt/PowellMethods.jl)
+[![Coverage](https://codecov.io/gh/emmt/PowellMethods.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/emmt/PowellMethods.jl)
 
 `PowellMethods` is a [Julia](http://julialang.org/) interface to some of the
 derivative-free optimization algorithms by M.J.D. Powell:
